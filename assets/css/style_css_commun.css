@@ -1,0 +1,89 @@
+.content-area {
+    width: 100%;
+    position: relative;
+    top: 450px;
+    background: #ebebeb;
+    height: 2600px;
+}
+
+#adminAll {
+    height: 1600px;
+}
+
+.content-area h2 {
+    font-family: poppins;
+    letter-spacing: 4px;
+    padding-top: 30px;
+    font-size: 40px;
+    margin: 0;
+}
+.content-area p {
+    padding: 2% 0px;
+    font-family: poppins;
+    line-height: 30px;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@font-face {
+    font-family: "Product";
+    src: url("../fonts/Itim-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Categorie";
+    src: url("../fonts/ATypewriterForMe.ttf");
+}
+
+.noUse {
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px black solid;
+    width: 50px;
+    background: #e6e6e6;
+}
+
+.use {
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px black solid;
+    width: 50px;
+    background: #2c3338;
+    color: antiquewhite;
+}
+
+.pages a:active, .pages a:visited, .pages a:link, .pagess a:active,.pagess a:visited,.pagess a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.retour a:active, .retour a:visited, .retour a:link {
+    margin-top: 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Categorie;
+    transition-duration: 0.5s;
+}
+
+.retour a:hover {
+    font-family: Categorie;
+    color: darkgray;
+    transition-duration: 0.5s;
+}
+
+.error {
+    margin-top: 15px;
+    border: 2px solid #393c45;
+    border-radius: 10px;
+    background: #35404c;
+    color: #e42222;
+}

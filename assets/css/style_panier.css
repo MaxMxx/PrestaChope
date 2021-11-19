@@ -1,0 +1,273 @@
+.main-hr {
+    width: 30%;
+    border: none;
+    border-top: 1px solid #c3c3c3;
+}
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+    width: 120px;
+}
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: red;
+}
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+    outline: none;
+}
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: red;
+    overflow: hidden;
+}
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.block_product {
+    padding: 10px;
+    margin: -300px;
+    margin-top: 65px;
+    border: 1px black solid;
+}
+
+.block_product img {
+    width: 100px;
+}
+
+.block_product p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.prix {
+    font-size: 20px;
+    display: flex;
+}
+
+table {
+    margin-top: 50px;
+    border: medium solid #2c3338;
+    border-collapse: collapse;
+    font-size: 25px;
+    padding: 50px;
+}
+
+th {
+    font-family: monospace;
+    border: thin solid #000000;
+    background-color: #dbefff;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+td {
+    font-family: sans-serif;
+    border: thin solid #6495ed;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.prix {
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.borderFoot {
+    border: none;
+    padding-bottom: 15px;
+    font-family: Product;
+}
+
+.img img {
+    width: 180px;
+}
+
+.add {
+    margin-top: 35px;
+}
+
+.add a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    background: #262c37;
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: 0.5s;
+    font-family: Categorie;
+}
+
+.add a:hover {
+    color: rgba(255,255,255,1);
+}
+
+.add a span {
+    display: block;
+    position: absolute;
+    background: #2894ff;
+}
+
+.add a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.add a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.add a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.add a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.add a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.add a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.add a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.add a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.borderFoot a:active, .borderFoot a:visited, .borderFoot a:link {
+    margin-top: 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Categorie;
+    transition-duration: 0.5s;
+}
+
+.borderFoot a:hover {
+    font-family: Categorie;
+    color: darkgray;
+    transition-duration: 0.5s;
+}
+
+.qte p {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.qte img{
+    margin-top: 5px;
+}
+
+.qte {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
