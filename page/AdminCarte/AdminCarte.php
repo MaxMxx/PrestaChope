@@ -41,3 +41,10 @@
 
 </body>
 </html>
+<!--
+<a href="#" class="btn">
+    <span class="text">Text</span>
+    <span class="flip-front">Ajouter une</span>
+    <span class="flip-back">Catégorie</span>
+</a>
+-->

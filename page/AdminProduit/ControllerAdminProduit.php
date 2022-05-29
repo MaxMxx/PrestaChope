@@ -6,9 +6,10 @@ include_once ('DTO/CategorieDTO.php');
 include_once('DAO/UserDAO.php');
 include_once('DTO/UserDTO.php');
  class ControllerAdminProduit{
-    public static function testPhoto(){
+    public static function testPhoto($categorie){
         if (isset($_POST['submit'])){
             $maxSize=100000;
+            $categorieUSE="";
             $validExt=array('.jpg','.jpeg','.gif','.png');
             if($_FILES['upload_file']['error'] >0){
                 echo"Une erreur est survenue lors du transfet";
@@ -16,6 +17,7 @@ include_once('DTO/UserDTO.php');
             }
             $fileSize=$_FILES['upload_file']['size'];
             if ($fileSize>$maxSize){
+                echo "Le fichier est trop gros";
                 return false;
             }
             $fileName=$_FILES['upload_file']['name'];
@@ -27,10 +29,21 @@ include_once('DTO/UserDTO.php');
                 return false;
             }
 
+            $categorieSelect = new CategorieDTO();
+            $categorieSelect = CategorieDAO::getCategorieById((int)$categorie);
+            foreach($categorieSelect as $cat) {
+                $categorieUSE = $cat->getNom();
+            }
+
+            $path = "assets/images/".$categorieUSE;
+            if (!file_exists($path)) {
+                mkdir($path, 0777, true);
+            }
+
             $tmpname=$_FILES['upload_file']["tmp_name"];
             $NomUnique=md5(uniqid(rand(),true));
-            $fileName="assets/photoproduits/".$NomUnique.$fileExt;
-            $result=move_uploaded_file($tmpname,$fileName);
+            $fileName="assets/images/".$categorieUSE."/".$NomUnique.$fileExt;
+            $result = move_uploaded_file($tmpname,"$fileName");
             if ($result){
                 return $fileName;
             }

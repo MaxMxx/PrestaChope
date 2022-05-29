@@ -14,7 +14,7 @@
         <div class="block_profil">
             <p>Vos informations :</p>
             <?php
-                // Re direction Controller profile -->
+
                 ControllerProfile::afficherProfile();
 
                 if (isset($_GET['r'])) {

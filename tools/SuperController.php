@@ -174,7 +174,7 @@ class SuperController
                 include_once('page/AdminProduit/ControllerAdminProduit.php');
                 if(!empty($_POST['nom']) && !empty($_POST['stock']) && !empty($_POST['prix'])) {
                     $instanceController = new ControllerAdminProduit();
-                    $photo = $instanceController->testPhoto();
+                    $photo = $instanceController->testPhoto($_POST['menu_destination']);
                     ProduitDAO::addProduit($instanceController->publierProduit($photo));
                 }
                 $instanceController=new ControllerAdminProduit();
